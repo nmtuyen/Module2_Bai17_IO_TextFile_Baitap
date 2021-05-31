@@ -27,6 +27,7 @@ public class ReadWriteFile {
             FileWriter fileWriter = new FileWriter(filePath, true);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
             bufferedWriter.write("Giá trị nhỏ nhất là: "+ min);
+            bufferedWriter.close();
         } catch (IOException e) {
             System.err.println("File không tồn tại or file lỗi");
         }

@@ -6,7 +6,7 @@ public class Main {
     public static int findMin(List<Integer> nums){
         int min = nums.get(0);
         for (int i = 0; i < nums.size(); i++){
-            if (min < nums.get(i)){
+            if (min > nums.get(i)){
                 min = nums.get(i);
             }
         }
@@ -18,6 +18,6 @@ public class Main {
 
         List<Integer> nums = readWriteFile.readFile("numbers.txt");
         int minValue = findMin(nums);
-        readWriteFile.writeFile("ketqua.txt", minValue);
+        readWriteFile.writeFile(".idea/ketqua.txt", minValue);
     }
 }
